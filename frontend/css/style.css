@@ -1,0 +1,1481 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #090b16;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(9, 11, 22, 0.85);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    backdrop-filter: blur(20px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: linear-gradient(135deg, #6c63ff, #00c2ff);
+
+    font-weight: 800;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #9ca3b5;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffffff;
+}
+
+.login-btn {
+    border: 1px solid rgba(255,255,255,0.15);
+
+    background: rgba(255,255,255,0.06);
+
+    color: white;
+
+    padding: 10px 22px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 650px;
+
+    padding: 90px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 15% 30%, rgba(108,99,255,0.20), transparent 35%),
+        radial-gradient(circle at 80% 20%, rgba(255,77,141,0.14), transparent 30%);
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.hero-tag {
+    display: inline-block;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #9ea5ff;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    background: linear-gradient(
+        90deg,
+        #6c63ff,
+        #00c2ff,
+        #ff4d8d
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: #a5a9ba;
+
+    max-width: 520px;
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    text-decoration: none;
+
+    padding: 14px 24px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #6c63ff,
+        #00a8ff
+    );
+
+    box-shadow: 0 10px 30px rgba(108,99,255,0.25);
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    background: rgba(255,255,255,0.04);
+}
+
+.secondary-btn:hover {
+    background: rgba(255,255,255,0.09);
+}
+
+
+/* ================= HERO VISUAL ================= */
+
+.hero-visual {
+    width: 470px;
+    height: 470px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-preview {
+    width: 330px;
+
+    background: #151827;
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.5);
+
+    transform: rotate(3deg);
+
+    transition: 0.4s;
+}
+
+.event-preview:hover {
+    transform: rotate(0deg) translateY(-8px);
+}
+
+.preview-image {
+    height: 230px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4f46e5,
+            #9333ea,
+            #ec4899
+        );
+}
+
+.preview-content {
+    padding: 22px;
+}
+
+.preview-content span {
+    font-size: 10px;
+    font-weight: 700;
+
+    color: #ff7bac;
+}
+
+.preview-content h3 {
+    margin: 7px 0;
+
+    font-size: 21px;
+}
+
+.preview-content p {
+    color: #8f94a8;
+
+    font-size: 12px;
+
+    margin-bottom: 18px;
+}
+
+.preview-content button {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #6c63ff,
+        #00a8ff
+    );
+
+    cursor: pointer;
+}
+
+.floating-card {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 17px;
+
+    background: rgba(22,25,40,0.9);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 14px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+
+    font-size: 20px;
+}
+
+.floating-card strong {
+    display: block;
+
+    font-size: 12px;
+}
+
+.floating-card small {
+    display: block;
+
+    color: #858a9e;
+
+    font-size: 10px;
+}
+
+.card-one {
+    top: 45px;
+    left: 0;
+}
+
+.card-two {
+    right: 0;
+    bottom: 55px;
+}
+
+
+/* ================= EVENTS ================= */
+
+.events-section {
+    padding: 90px 7%;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+.section-label {
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 700;
+
+    color: #8e8bff;
+}
+
+.section-heading h2,
+.features h2 {
+    font-size: 34px;
+
+    margin-top: 5px;
+
+    letter-spacing: -1px;
+}
+
+.section-heading a {
+    color: #9b9eff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.event-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.event-card {
+    background: #131624;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: 0.35s;
+}
+
+.event-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(108,99,255,0.5);
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.event-image {
+    height: 210px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.tech {
+    background: linear-gradient(135deg, #312e81, #2563eb);
+}
+
+.cultural {
+    background: linear-gradient(135deg, #be185d, #f97316);
+}
+
+.sports {
+    background: linear-gradient(135deg, #047857, #06b6d4);
+}
+
+.event-info {
+    padding: 20px;
+}
+
+.event-category {
+    font-size: 10px;
+
+    color: #8d91ff;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.event-info h3 {
+    font-size: 18px;
+
+    margin: 7px 0;
+}
+
+.event-info p {
+    color: #858a9e;
+
+    font-size: 11px;
+}
+
+.event-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 18px;
+}
+
+.event-bottom strong {
+    font-size: 15px;
+}
+
+.event-bottom a {
+    text-decoration: none;
+
+    color: white;
+
+    background: rgba(108,99,255,0.15);
+
+    border: 1px solid rgba(108,99,255,0.3);
+
+    padding: 8px 13px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+    padding: 90px 7%;
+
+    text-align: center;
+
+    background: #0d101d;
+}
+
+.features h2 {
+    max-width: 600px;
+
+    margin: 10px auto 45px;
+}
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.feature {
+    padding: 35px 25px;
+
+    background: rgba(255,255,255,0.03);
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    border-radius: 18px;
+}
+
+.feature-icon {
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: #858a9e;
+
+    font-size: 13px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 40px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    color: #777c90;
+
+    font-size: 12px;
+}
+
+footer .logo {
+    color: white;
+}
+
+.copyright {
+    color: #555a6c;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding-top: 70px;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .event-grid,
+    .feature-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-visual {
+        transform: scale(0.9);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-visual {
+        width: 100%;
+
+        transform: scale(0.75);
+    }
+
+    .event-grid,
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        align-items: start;
+        gap: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+}
+.event-image {
+    height: 210px;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.06);
+}
+/* ================= EVENTS PAGE ================= */
+
+.events-page {
+    padding: 70px 7%;
+    min-height: 700px;
+}
+
+.events-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+.small-heading {
+    color: #8d91ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.events-heading h1 {
+    font-size: 48px;
+    margin: 8px 0 12px;
+}
+
+.events-heading > p:last-child {
+    color: #9297aa;
+    font-size: 15px;
+}
+
+
+/* SEARCH */
+
+.search-box {
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 16px 20px;
+
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+
+    background: #131624;
+    color: white;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #6c63ff;
+}
+
+
+/* CATEGORIES */
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    margin-bottom: 40px;
+}
+
+.category {
+    padding: 10px 18px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    background: #131624;
+
+    color: #a3a7b8;
+
+    cursor: pointer;
+}
+
+.category.active,
+.category:hover {
+    background: #6c63ff;
+    color: white;
+}
+
+
+/* EVENT CARDS */
+
+.events-page .event-grid {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.events-page .event-card {
+    background: #131624;
+}
+
+.events-page .event-image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.events-page .event-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+.events-page .event-card:hover .event-image img {
+    transform: scale(1.05);
+}
+
+.events-page .event-info p {
+    margin: 4px 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .events-page {
+        padding: 50px 5%;
+    }
+
+    .events-heading h1 {
+        font-size: 38px;
+    }
+
+    .categories {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .category {
+        white-space: nowrap;
+    }
+
+}
+/* =====================================================
+   EVENT DETAILS PAGE
+===================================================== */
+
+.event-details-page {
+    min-height: 70vh;
+    padding: 70px 8%;
+    background: #f8fafc;
+}
+
+.event-details-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.details-image {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.details-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-content {
+    padding: 10px;
+}
+
+.details-content h1 {
+    font-size: 42px;
+    margin: 12px 0 20px;
+}
+
+.details-description {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.event-meta {
+    display: grid;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.event-meta div {
+    padding: 15px 18px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.event-meta strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.event-meta p {
+    margin: 0;
+    color: #64748b;
+}
+
+.register-main-btn {
+    border: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.register-main-btn:hover {
+    opacity: 0.9;
+}
+
+.back-events {
+    display: block;
+    margin-top: 20px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .event-details-container {
+        grid-template-columns: 1fr;
+    }
+
+    .details-image {
+        height: 280px;
+    }
+
+    .details-content h1 {
+        font-size: 32px;
+    }
+
+}
+/* REGISTRATION FORM */
+
+.registration-form {
+    display: none;
+    margin-top: 25px;
+    padding: 25px;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.registration-form h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.registration-form input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    margin-bottom: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+/* =====================================================
+   MY REGISTRATIONS PAGE
+===================================================== */
+
+.registrations-page {
+    min-height: 70vh;
+    padding: 70px 8%;
+    background: #f8fafc;
+}
+
+.registrations-header {
+    max-width: 800px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.registrations-header h1 {
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+.registrations-header p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+
+/* REGISTRATION CARD */
+
+.registrations-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.registration-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.registration-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.registration-status {
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #dcfce7;
+    color: #166534;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.registration-card h2 {
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+.registration-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: #475569;
+}
+
+.registration-details p {
+    margin: 0;
+}
+
+
+/* BUTTONS */
+
+.registration-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.view-pass-btn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.view-pass-btn:hover {
+    opacity: 0.9;
+}
+
+.registration-actions a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .registrations-page {
+        padding: 50px 5%;
+    }
+
+    .registrations-header h1 {
+        font-size: 32px;
+    }
+
+    .registration-card-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .registration-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .registration-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .view-pass-btn {
+        width: 100%;
+    }
+
+}
+/* =====================================================
+   EVENTS PAGE - SPACIOUS SEARCH & FILTERS
+===================================================== */
+
+/* Events page spacing */
+.events-page {
+    padding: 70px 8%;
+}
+
+/* Header */
+.events-header {
+    margin-bottom: 32px;
+}
+
+.events-header h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.events-header p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* SEARCH BAR */
+
+.event-search {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 15px 20px;
+
+    margin-bottom: 24px;
+
+    background: #111827;
+    border: 1px solid #334155;
+    border-radius: 14px;
+
+    transition: 0.2s ease;
+}
+
+.event-search:focus-within {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.event-search span {
+    font-size: 18px;
+}
+
+.event-search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    color: white;
+    font-size: 15px;
+}
+
+.event-search input::placeholder {
+    color: #64748b;
+}
+
+
+/* FILTER BUTTONS */
+
+.event-filters {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 11px 22px;
+
+    border: 1px solid #334155;
+    border-radius: 24px;
+
+    background: #111827;
+    color: #cbd5e1;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    border-color: #3b82f6;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.filter-btn.active {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: white;
+}
+
+
+/* EVENT GRID */
+
+.full-events-grid {
+    gap: 24px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .events-page {
+        padding: 50px 5%;
+    }
+
+    .events-header h1 {
+        font-size: 34px;
+    }
+
+    .event-search {
+        padding: 14px 16px;
+    }
+
+    .event-filters {
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .filter-btn {
+        padding: 10px 16px;
+    }
+
+}
+
+
+
+/* =====================================================
+   MY REGISTRATIONS - CLEAR HEADING
+===================================================== */
+
+.registrations-header h1 {
+    color: #111827;
+}
+
+.registrations-header p {
+    color: #64748b;
+}
+.login-btn {
+    text-decoration: none;
+    display: inline-block;
+}
+/* LOGIN PAGE */
+
+.login-page {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background: #f8f9ff;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.login-box h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.login-box > p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.login-box input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.login-box input:focus {
+    border-color: #6c63ff;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #6c63ff;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    opacity: 0.9;
+}
+
+.login-box a {
+    color: #6c63ff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#authMessage {
+    margin-top: 18px;
+    font-weight: 600;
+}
+/* CAMPUS MAP */
+
+.campus-map {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.campus-map h2 {
+    margin-bottom: 8px;
+}
+
+.campus-map > p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.map-area {
+    position: relative;
+    height: 400px;
+    background: #e8f0e4;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #d5ddcf;
+}
+.map-area::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 35px;
+    background: #d8d2c4;
+    top: 48%;
+    left: 10%;
+    border-radius: 20px;
+    transform: rotate(-8deg);
+}
+
+.map-area::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 80%;
+    background: #d8d2c4;
+    top: 10%;
+    left: 48%;
+    border-radius: 20px;
+    transform: rotate(8deg);
+}
+.map-location {
+    position: absolute;
+    cursor: pointer;
+    padding: 12px 16px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: 0.2s;
+    z-index: 2;
+}
+
+.map-location:hover {
+    transform: scale(1.1);
+}
+.map-location span {
+    font-size: 25px;
+}
+.map-location:hover {
+    transform: scale(1.08);
+}
+
+.map-location span {
+    font-size: 22px;
+}
+
+.conclave {
+    top: 70px;
+    left: 20%;
+}
+
+.atrium {
+    top: 160px;
+    right: 20%;
+}
+
+.ground {
+    bottom: 60px;
+    left: 40%;
+}
+
+.map-info {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.map-info h3 {
+    margin: 0 0 5px;
+}
+
+.map-info p {
+    margin: 0;
+    color: #666;
+}
+.map-location strong {
+    display: block;
+    color: #222;
+    font-size: 14px;
+}.events-page{padding:60px 7%;min-height:70vh}.events-page input{padding:14px;border:1px solid rgba(255,255,255,.15);background:#151827;color:#fff;border-radius:10px;width:100%;margin:25px 0}.registration-card{background:#151827;border:1px solid rgba(255,255,255,.1);padding:24px;border-radius:16px;margin:16px 0}.registration-card a{display:inline-block;margin-top:12px;color:white;text-decoration:none}

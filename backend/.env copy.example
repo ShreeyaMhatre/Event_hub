@@ -1,0 +1,11 @@
+DATABASE_URL=sqlite:///./eventhub.db
+JWT_SECRET=change-this-secret
+PASS_SECRET=change-this-pass-secret
+RAZORPAY_KEY_ID=rzp_test_TenA84pBjXgiI0
+RAZORPAY_KEY_SECRET=UU329PvyHfeZN0UaTmi9fLsY
+RAZORPAY_WEBHOOK_SECRET=change-me
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=admin123
+SCANNER_KEY=gate-a-dev-key
+PUBLIC_BASE_URL=http://127.0.0.1:8000
+ALLOW_EARLY_SCAN=true

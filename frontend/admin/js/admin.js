@@ -1,0 +1,1 @@
+const A={k:()=>localStorage.getItem('admin_key'),async r(p,o={}){let h={'Content-Type':'application/json','X-Admin-Key':this.k(),...(o.headers||{})},r=await fetch(p,{...o,headers:h}),d=await r.json().catch(()=>({}));if(!r.ok)throw Error(d.detail||'Admin error');return d}};if(!A.k()&&!location.pathname.endsWith('login.html'))location='login.html';
